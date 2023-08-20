@@ -1,0 +1,1 @@
+**Chinese New Year** , **Spring Festival** or the **Lunar New Year**, is the festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.

@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Page
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Page</h1>
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ create_form.title.id_for_label }}">Title:</label><br>
+        {{  create_form.title  }}<br>
+        <label for="{{ create_form.title.content }}">Content (use <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> syntax for the content):</label><br>
+        {{  create_form.content  }}<br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
